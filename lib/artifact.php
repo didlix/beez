@@ -12,54 +12,65 @@
  **/
 abstract class Artifact {
 
-	private var $_hitPoints;
-	
-	/**
-	 * Value to be deducted from $_hitPoints when
-	 * ->hit() is called.
-	 *
-	 * @var int
-	 **/
-	private var $_damageFromHit;
+    /**
+     * This Artifact's hit points
+     *
+     * @var int
+     **/
+    private var $_hitPoints = 0;
+    
+    /**
+     * Value to be deducted from $_hitPoints when
+     * ->hit() is called.
+     *
+     * @var int
+     **/
+    private var $_damageFromHit = 0;
 
-	/**
-	 * Unique ID of the object
-	 *
-	 * @var string
-	 **/
-	private var $_id;
-
-
-	/**
-	 * Returns this Artifact's hit points
-	 *
-	 * @return int
-	 * @author Rachel Graves
-	 **/
-	public function getHitPoints()
-	{
-		return $this->_hitPoints;
-	}
+    /**
+     * Unique ID of the object
+     *
+     * @var string
+     **/
+    private var $_id;
 
 
-	/**
-	 * undocumented function
-	 *
-	 * @return int Remaining hit points
-	 * @author Rachel Graves
-	 **/
-	public function hit()
-	{
+    public function __construct()
+    {
+        $this->_id = uniqid('artifact');
+    }
 
-		$this->_hitPoints = $this->_hitPoints - $this->_damageFromHit;
+    /**
+     * Returns this Artifact's hit points
+     *
+     * @return int
+     * @author Rachel Graves
+     **/
+    public function getHitPoints()
+    {
+        return $this->_hitPoints;
+    }
 
-		// If this Artifact has no hit points left, 
-		if ($this->_hitPoints <= 0) {
-			unset($this);
-		}
 
-		return $this->getHitPoints(); 
+    /**
+     * Reduce the number of hit points of this artifact,
+     * using the $_damageFromHit value.
+     *
+     * @return int Remaining hit points
+     * @author Rachel Graves
+     **/
+    public function hit()
+    {
 
-	}
-		
+        $this->_hitPoints = $this->_hitPoints - $this->_damageFromHit;
+
+        // If this Artifact has no hit points left, 
+        if ($this->_hitPoints <= 0) {
+            unset($this);
+        }
+
+        return $this->getHitPoints(); 
+
+    }
+        
 }
