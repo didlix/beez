@@ -31,7 +31,7 @@ abstract class World {
     var $_rules;
 
     /**
-     * store an artifact in the world
+     * Store an artifact in the world
      *
      * @return void
      * @author Rachel Graves
@@ -43,7 +43,7 @@ abstract class World {
 
 
     /**
-     * store a rule in the world
+     * Store a rule in the world
      *
      * @return void
      * @author Rachel Graves
@@ -51,6 +51,20 @@ abstract class World {
     public function storeRule(Rule $rule)
     {
         $this->_rules[] = $rule;
+    }
+
+
+    /**
+     * Run all rules in the world
+     *
+     * @return void
+     * @author Rachel Graves
+     **/
+    public function runRules()
+    {
+        foreach ($this->_rules AS $rule) {
+            $rule->rule($this);
+        }
     }
 
 
