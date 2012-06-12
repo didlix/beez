@@ -4,12 +4,13 @@
 set_include_path(get_include_path() . PATH_SEPARATOR . '../lib');
 
 require_once('Game.php');
-require_once('Browser_Renderer.php');
+require_once('Browser_Rendering_Engine.php');
+require_once('World.php');
 
 // Start a new game when the start button is pressed
 if(isset($_POST['start']) || empty($_POST)) {
 
-	$game = new Game(new World);
+	$game = new Game(new World, new Browser_Rendering_Engine);
 	$game->start();
 
 } elseif (isset($_POST['serialized_game'])) {
@@ -25,4 +26,4 @@ if(isset($_POST['turn'])) {
 }
 
 // Render the game using a Browser_Render class
-$game->render(new Browser_Renderer);
+$game->render();
