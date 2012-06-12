@@ -26,4 +26,4 @@ if(isset($_POST['turn'])) {
 }
 
 // Render the game using a Browser_Render class
-$game->render();
+echo $game->render();
