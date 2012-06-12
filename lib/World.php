@@ -82,7 +82,7 @@ class World {
      */
     public function __construct()
     {
-        
+        $this->_id = uniqid('world');
     }
 
 }
