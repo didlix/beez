@@ -1,5 +1,10 @@
 <?php
 
+require_once('Artifact.php');
+require_once('Worker_Bee.php');
+require_once('Queen_Bee.php');
+require_once('Drone_Bee.php');
+
 /**
  * The game engine which includes the world and its artifacts
  *
@@ -51,7 +56,23 @@ class Game
 	 **/
 	public function start()
 	{
-
+		$this->_world->storeArtifact(new Worker_Bee);
+		$this->_world->storeArtifact(new Worker_Bee);
+		$this->_world->storeArtifact(new Worker_Bee);
+		$this->_world->storeArtifact(new Worker_Bee);
+		$this->_world->storeArtifact(new Worker_Bee);
+		$this->_world->storeArtifact(new Worker_Bee);
+		$this->_world->storeArtifact(new Worker_Bee);
+		$this->_world->storeArtifact(new Queen_Bee);
+		$this->_world->storeArtifact(new Queen_Bee);
+		$this->_world->storeArtifact(new Queen_Bee);
+		$this->_world->storeArtifact(new Drone_Bee);
+		$this->_world->storeArtifact(new Drone_Bee);
+		$this->_world->storeArtifact(new Drone_Bee);
+		$this->_world->storeArtifact(new Drone_Bee);
+		$this->_world->storeArtifact(new Drone_Bee);
+		$this->_world->storeRule(new Rule_All_Queen_Bees_Die);
+		$this->_world->storeRule(new Rule_All_Bees_Die);
 	}
 
 	/**
