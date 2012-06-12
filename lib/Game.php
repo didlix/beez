@@ -62,7 +62,7 @@ class Game
 	 **/
 	public function render()
 	{
-		$this->_renderingEngine->render();
+		$this->_renderingEngine->render($this->_world);
 	}
 
 } // END class Game 
