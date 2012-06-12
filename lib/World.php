@@ -15,7 +15,6 @@ abstract class World {
      **/
     var $_id;
 
-
     /**
      * Artifacts stored in this world
      *
@@ -41,7 +40,6 @@ abstract class World {
         $this->_artifacts[] = $artifact;
     }
 
-
     /**
      * Store a rule in the world
      *
@@ -52,7 +50,6 @@ abstract class World {
     {
         $this->_rules[] = $rule;
     }
-
 
     /**
      * Run all rules in the world
