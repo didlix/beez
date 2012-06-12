@@ -9,7 +9,7 @@
 abstract class World {
     
     /**
-     * undocumented class variable
+     * Unique ID
      *
      * @var string
      **/
@@ -24,7 +24,7 @@ abstract class World {
     var $_artifacts = array();
 
     /**
-     * undocumented class variable
+     * Rules stored in this world
      *
      * @var array
      **/
