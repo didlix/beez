@@ -62,7 +62,7 @@ abstract class Artifact {
 
         $this->_hitPoints = $this->_hitPoints - $this->_damageFromHit;
 
-        // If this Artifact has no hit points left, 
+        // If this Artifact has no hit points left, destroy the object
         if ($this->_hitPoints <= 0) {
             unset($this);
         }
