@@ -19,9 +19,16 @@ abstract class World {
     /**
      * Artifacts stored in this world
      *
-     * @var string
+     * @var array
      **/
     var $_artifacts = array();
+
+    /**
+     * undocumented class variable
+     *
+     * @var array
+     **/
+    var $_rules;
 
     /**
      * store an artifact in the world
@@ -29,12 +36,22 @@ abstract class World {
      * @return void
      * @author Rachel Graves
      **/
-    public function store(Artifact $artifact)
+    public function storeArtifact(Artifact $artifact)
     {
         $this->_artifacts[] = $artifact;
     }
 
 
+    /**
+     * store a rule in the world
+     *
+     * @return void
+     * @author Rachel Graves
+     **/
+    public function storeRule(Rule $rule)
+    {
+        $this->_rules[] = $rule;
+    }
 
 
 }
