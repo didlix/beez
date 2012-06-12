@@ -65,6 +65,17 @@ class World {
     }
 
     /**
+     * Return an array of Artifact objects
+     *
+     * @return array of Artifact objects
+     * @author Rachel Graves
+     **/
+    public function getArtifacts()
+    {
+        return $this->_artifacts;
+    }
+
+    /**
      * Constructor in world 
      *
      * @author Rachel Graves
