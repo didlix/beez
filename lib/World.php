@@ -6,28 +6,28 @@
  * @package default
  * @author Rachel Graves
  **/
-abstract class World {
+class World {
     
     /**
      * Unique ID
      *
      * @var string
      **/
-    var $_id;
+    private $_id;
 
     /**
      * Artifacts stored in this world
      *
      * @var array
      **/
-    var $_artifacts = array();
+    private $_artifacts = array();
 
     /**
      * Rules stored in this world
      *
      * @var array
      **/
-    var $_rules;
+    private $_rules;
 
     /**
      * Store an artifact in the world
@@ -65,11 +65,13 @@ abstract class World {
     }
 
     /**
-     * Constructor in world to be implemented by Game 
+     * Constructor in world 
      *
      * @author Rachel Graves
      */
-    abstract public function __construct();
-
+    public function __construct()
+    {
+        
+    }
 
 }

@@ -7,7 +7,7 @@ class Queen_Bee extends Artifact {
      *
      * @var int
      **/
-    private var $_hitPoints = 100;
+    private $_hitPoints = 100;
     
     /**
      * Value to be deducted from $_hitPoints when
@@ -15,6 +15,6 @@ class Queen_Bee extends Artifact {
      *
      * @var int
      **/
-    private var $_damageFromHit = 7;
+    private $_damageFromHit = 7;
 	
 }

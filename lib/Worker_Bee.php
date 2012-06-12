@@ -7,7 +7,7 @@ class Worker_Bee extends Artifact {
      *
      * @var int
      **/
-    private var $_hitPoints = 75;
+    private $_hitPoints = 75;
     
     /**
      * Value to be deducted from $_hitPoints when
@@ -15,6 +15,6 @@ class Worker_Bee extends Artifact {
      *
      * @var int
      **/
-    private var $_damageFromHit = 12;
+    private $_damageFromHit = 12;
 
 }

@@ -17,7 +17,7 @@ abstract class Artifact {
      *
      * @var int
      **/
-    private var $_hitPoints = 0;
+    private $_hitPoints = 0;
     
     /**
      * Value to be deducted from $_hitPoints when
@@ -25,14 +25,14 @@ abstract class Artifact {
      *
      * @var int
      **/
-    private var $_damageFromHit = 0;
+    private $_damageFromHit = 0;
 
     /**
      * Unique ID of the object
      *
      * @var string
      **/
-    private var $_id;
+    private $_id;
 
 
     /**

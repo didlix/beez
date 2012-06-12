@@ -8,7 +8,7 @@ class Drone_Bee extends Artifact {
      *
      * @var int
      **/
-    private var $_hitPoints = 50;
+    private $_hitPoints = 50;
     
     /**
      * Value to be deducted from $_hitPoints when
@@ -16,6 +16,6 @@ class Drone_Bee extends Artifact {
      *
      * @var int
      **/
-    private var $_damageFromHit = 18;
+    private $_damageFromHit = 18;
 
 }
