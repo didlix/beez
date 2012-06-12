@@ -3,6 +3,6 @@
 abstract class Rendering_Engine
 {
 
-	abstract function render();
+	abstract function render(World $world);
 
 }
