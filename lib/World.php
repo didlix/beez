@@ -64,5 +64,12 @@ abstract class World {
         }
     }
 
+    /**
+     * Constructor in world to be implemented by Game 
+     *
+     * @author Rachel Graves
+     */
+    abstract public function __construct();
+
 
 }
