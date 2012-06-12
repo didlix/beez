@@ -1,5 +1,7 @@
 <?php
 
+require_once('Artifact.php');
+
 class Drone_Bee extends Artifact {
 	
 

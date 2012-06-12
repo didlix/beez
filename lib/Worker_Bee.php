@@ -1,5 +1,7 @@
 <?php
 
+require_once('Artifact.php');
+
 class Worker_Bee extends Artifact {
 	
     /**
