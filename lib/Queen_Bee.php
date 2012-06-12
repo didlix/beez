@@ -2,7 +2,6 @@
 
 class Queen_Bee extends Artifact {
 
-
 	/**
      * This Artifact's hit points
      *
@@ -17,6 +16,5 @@ class Queen_Bee extends Artifact {
      * @var int
      **/
     private var $_damageFromHit = 7;
-
 	
 }

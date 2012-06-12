@@ -1,11 +1,9 @@
 <?php
 
-
 /**
  * If all Queen bees die then the game should end
  */
-class rule_all_queen_bees_die extends rule {
-
+class Rule_All_Queen_Bees_Die extends Rule {
 
 	/**
 	 * Cound the number of Queen Bee Artifacts in the world

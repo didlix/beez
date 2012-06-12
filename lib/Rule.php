@@ -1,13 +1,12 @@
 <?php
 
-
 /**
  * Add rules to your game 
  *
  * @package default
  * @author Rachel Graves
  **/
-abstract class rule {
+abstract class Rule {
 	
 	/**
 	 * Abstract class for adding your own rules
@@ -15,6 +14,6 @@ abstract class rule {
 	 * @return World
 	 * @author 
 	 **/
-	abstract public function action(World $world);
+	abstract public function rule(World $world);
 
 }
