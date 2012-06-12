@@ -1,5 +1,7 @@
 <?php
 
+require_once('Rule.php');
+
 /**
  * If all Queen bees die then the game should end
  */
@@ -22,7 +24,7 @@ class Rule_All_Queen_Bees_Die extends Rule {
 
 		}
 
-		if(0 <= $queen_bees) {
+		if($queen_bees <= 0) {
 			$world->gameOver('All Queen Bees Are Dead');
 		}
 
