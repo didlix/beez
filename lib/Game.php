@@ -34,7 +34,7 @@ class Game
 	 * Store a unique id, world object and rendering engine
 	 *
 	 * @return void
-	 * @author 
+	 * @author Rachel Graves
 	 **/
 	function __construct(Rendering_Engine $renderingEngine)
 	{
