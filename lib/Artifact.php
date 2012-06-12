@@ -76,5 +76,20 @@ abstract class Artifact {
         return $this->getHitPoints(); 
 
     }
+
+    /**
+     * See if this artifact is dead. Returns true if dead, false if alive.
+     *
+     * @return boolean
+     * @author Rachel Graves
+     **/
+    public function isDead()
+    {
+        if($this->getHitPoints <= 0) {
+            return true;
+        }
+
+        return false;
+    }
         
 }
