@@ -16,7 +16,8 @@ class Rule_All_Queen_Bees_Die extends Rule {
 		foreach ($world->getArtifacts() AS $artifact) {
 
 			if('Queen_Bee' === get_class($artifact)) {
-				$queen_bees++;
+				if(false === $artifact->isDead()) {
+					$queen_bees++;
 			}
 
 		}
