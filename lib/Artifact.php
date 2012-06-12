@@ -34,6 +34,12 @@ abstract class Artifact {
      **/
     private var $_id;
 
+
+    /**
+     * Add a unique id to this artifact
+     *
+     * @return void
+     */
     public function __construct()
     {
         $this->_id = uniqid('artifact');
