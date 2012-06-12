@@ -12,7 +12,7 @@ abstract class Rule {
 	 * Abstract class for adding your own rules
 	 *
 	 * @return World
-	 * @author 
+	 * @author Rachel Graves
 	 **/
 	abstract public function rule(World $world);
 
