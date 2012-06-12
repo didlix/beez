@@ -9,28 +9,26 @@ class Rule_All_Queen_Bees_Die extends Rule {
 
 	/**
 	 * Cound the number of Queen Bee Artifacts in the world
+	 *
+	 * @return void
 	 */
 	public function rule(World $world)
 	{
 
-		$bees = 0;
+
+		$queen_bees = 0;
 
 		foreach ($world->getArtifacts() AS $artifact) {
 
-			switch (get_class($artifact)) {
-				case 'Queen_Bee':
-				case 'Drone_Bee':
-				case 'Worker_Bee':
-					if(false === $artifact->isDead()) {
-						$bees++;
-						break;
-					}
-					
+			if('Queen_Bee' === get_class($artifact)) {
+				if(false === $artifact->isDead()) {
+					$queen_bees++;
+				}
 			}
 
 		}
 
-		if($bees <= 0) {
+		if($queen_bees <= 0) {
 			$world->gameOver('All Queen Bees Are Dead');
 		}
 
