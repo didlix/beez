@@ -34,7 +34,6 @@ abstract class Artifact {
      **/
     private var $_id;
 
-
     public function __construct()
     {
         $this->_id = uniqid('artifact');
@@ -50,7 +49,6 @@ abstract class Artifact {
     {
         return $this->_hitPoints;
     }
-
 
     /**
      * Reduce the number of hit points of this artifact,
