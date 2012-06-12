@@ -54,4 +54,15 @@ class Game
 
 	}
 
+	/**
+	 * undocumented function
+	 *
+	 * @return void
+	 * @author 
+	 **/
+	public function render()
+	{
+		$this->_renderingEngine->render();
+	}
+
 } // END class Game 
