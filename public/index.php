@@ -3,19 +3,24 @@
 
 set_include_path(get_include_path() . PATH_SEPARATOR . '../lib');
 
+require_once('Game.php');
+require_once('Browser_Renderer.php');
+
 // Start a new game when the start button is pressed
-if($_POST['start']) {
+if(isset($_POST['start']) || empty($_POST)) {
 
 	$game = new Game(new World);
 	$game->start();
 
-} else {
+} elseif (isset($_POST['serialized_game'])) {
+
 	// Resume the game, will get serialized game data from $_POST
-	$game->resume($_POST);
+	$game = unserialize($_POST['serialized_game']);
 }
 
 // If the turn button is pressed, start a new turn
-if($_POST['turn']) {
+if(isset($_POST['turn'])) {
+
 	$game->turn();
 }
 
