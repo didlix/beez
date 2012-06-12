@@ -1,9 +1,10 @@
 <?php
 
-require_once('Artifact.php');
 require_once('Worker_Bee.php');
 require_once('Queen_Bee.php');
 require_once('Drone_Bee.php');
+require_once('Rule_All_Bees_Die.php');
+require_once('Rule_All_Queen_Bees_Die.php');
 
 /**
  * The game engine which includes the world and its artifacts
