@@ -43,4 +43,15 @@ class Game
         $this->_id = uniqid('game');
 	}
 
+	/**
+	 * Start the game
+	 *
+	 * @return void
+	 * @author Rachel Graves
+	 **/
+	public function start()
+	{
+
+	}
+
 } // END class Game 
