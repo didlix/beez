@@ -36,7 +36,7 @@ class Game
 	 * @return void
 	 * @author Rachel Graves
 	 **/
-	function __construct(Rendering_Engine $renderingEngine)
+	function __construct(World $world, Rendering_Engine $renderingEngine)
 	{
 		$this->_world = $world;
 		$this->_renderingEngine = $renderingEngine;
